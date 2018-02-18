@@ -1,0 +1,13 @@
+{
+  "name": "karakan",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/LiquidLemon/karakan",
+  "author": "LiquidLemon <liquidlemon@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "erlpack": "hammerandchisel/erlpack",
+    "uws": "^9.14.0"
+  }
+}
