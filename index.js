@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const Logger = require('./src/Logger')
+const Handlers = require('./src/Handlers')
 
 const client = new Discord.Client()
 
@@ -11,9 +12,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     Logger.info(msg.content)
-    if (msg.content == '!ping') {
-        msg.channel.send('pong')
-    }
+    Handlers.some(h => h(msg))
 })
 
 process.on('SIGINT', () => {
