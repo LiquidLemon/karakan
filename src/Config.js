@@ -1,8 +1,8 @@
 const Logger = require('./Logger')
 const token = process.env.DISCORD_TOKEN
 if (!token) {
-    logger.error('DISCORD_TOKEN is empty')
-    process.exit();
+    Logger.error('DISCORD_TOKEN is empty')
+    process.exit(1);
 }
 
 module.exports = {
