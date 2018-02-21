@@ -1,10 +1,9 @@
 const Discord = require('discord.js')
 const Logger = require('./src/Logger')
 const Handlers = require('./src/Handlers')
+const Config = require('./src/Config')
 
 const client = new Discord.Client()
-
-const token = process.env.DISCORD_TOKEN || process.exit(1);
 
 client.on('ready', () => {
     Logger.info("Locked & loaded")
@@ -25,4 +24,4 @@ process.on('SIGINT', () => {
     client.destroy().then(process.exit)
 })
 
-client.login(token)
+client.login(Config.token)
