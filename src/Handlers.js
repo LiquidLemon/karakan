@@ -1,9 +1,6 @@
-const fs = require('fs')
-const path = require('path')
+const handlerNames = [
+    'CommandHandler'
+]
 
-const handlersPath = path.join(__dirname, 'handlers')
-const ignoredFiles = ['.', '..']
-const handlerFiles = fs.readdirSync(handlersPath)
-    .filter(c => !ignoredFiles.includes(c) && /\.js$/.test(c))
+module.exports = handlerNames.map(n => require(`./handlers/${n}`))
 
-module.exports = handlerFiles.map(file => require(`./handlers/${file}`))
