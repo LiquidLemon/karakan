@@ -5,7 +5,7 @@ class Command {
     }
 
     resolve(msg, args) {
-        this.fun(null, msg, args)
+        this.fun(msg, args)
     }
 }
 
