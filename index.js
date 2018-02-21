@@ -12,7 +12,12 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     Logger.info(msg.content)
-    Handlers.some(h => h(msg))
+    const context = {
+        client,
+        message: msg,
+        logger: Logger
+    }
+    Handlers.some(h => h(context))
 })
 
 process.on('SIGINT', () => {

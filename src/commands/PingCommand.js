@@ -1,7 +1,7 @@
 const Command = require('./Command')
 
-const ping = (msg, args) => {
-    msg.channel.send('pong ' + args.join(' '))
+const ping = ({ message }, args) => {
+    message.channel.send('pong ' + args.join(' '))
 }
 
 module.exports = new Command({

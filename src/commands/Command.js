@@ -4,8 +4,8 @@ class Command {
         this.fun = fun || (x => {})
     }
 
-    resolve(msg, args) {
-        this.fun(msg, args)
+    resolve(ctx, args) {
+        this.fun(ctx, args)
     }
 }
 
