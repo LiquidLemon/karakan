@@ -25,3 +25,7 @@ DISCORD_TOKEN=your_app_token yarn start
 set DISCORD_TOKEN=your_app_token
 yarn start
 ```
+
+## Stopping
+
+To stop the bot press `Ctrl + C`.
