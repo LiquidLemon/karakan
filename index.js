@@ -10,14 +10,16 @@ client.on('ready', () => {
 })
 
 client.on('message', msg => {
-    Logger.info(msg.content)
-    const context = {
-        client,
-        message: msg,
-        logger: Logger,
-        config: Config
+    if (msg.author.id !== client.user.id) {
+        Logger.info(msg.content)
+        const context = {
+            client,
+            message: msg,
+            logger: Logger,
+            config: Config
+        }
+        Handlers.some(h => h(context))
     }
-    Handlers.some(h => h(context))
 })
 
 process.on('SIGINT', () => {
