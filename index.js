@@ -14,7 +14,8 @@ client.on('message', msg => {
     const context = {
         client,
         message: msg,
-        logger: Logger
+        logger: Logger,
+        config: Config
     }
     Handlers.some(h => h(context))
 })
