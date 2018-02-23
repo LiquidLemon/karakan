@@ -11,7 +11,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if (msg.author.id !== client.user.id) {
-        Logger.info(msg.content)
+        Logger.logMessage(msg)
         const context = {
             client,
             message: msg,

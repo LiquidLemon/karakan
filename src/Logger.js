@@ -18,4 +18,8 @@ const Logger = createLogger({
     ]
 })
 
+Logger.logMessage = function ({ content, author, guild, channel}) {
+    this.info(`[${guild.name}#${channel.name}] <${author.username}#${author.discriminator}>: ${content}`)
+}
+
 module.exports = Logger
