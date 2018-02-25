@@ -3,5 +3,8 @@ node_js: node
 
 cache: yarn
 
+install:
+  - yarn install --ignore-optional
+
 before_script:
   - yarn lint
