@@ -6,7 +6,7 @@ const Config = require('./src/Config')
 const client = new Discord.Client()
 
 client.on('ready', () => {
-    Logger.info("Locked & loaded")
+    Logger.info('Locked & loaded')
 })
 
 client.on('message', msg => {
