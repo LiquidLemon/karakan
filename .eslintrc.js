@@ -1,4 +1,7 @@
 module.exports = {
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
     "env": {
         "node": true,
         "es6": true
@@ -30,7 +33,7 @@ module.exports = {
             "property"
         ],
         "eqeqeq": "error",
-        "no-var": "error",
+        "no-var": "warn",
         "prefer-const": "warn",
         "prefer-template": "warn",
         "prefer-spread": "warn",

@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const Logger = require('./src/Logger')
 const Handlers = require('./src/Handlers')
 const Config = require('./src/Config')
+const Commands = require('./src/Commands')
 
 const client = new Discord.Client()
 
@@ -16,7 +17,8 @@ client.on('message', msg => {
             client,
             message: msg,
             logger: Logger,
-            config: Config
+            config: Config,
+            commands: Commands
         }
         Handlers.some(h => h(context))
     }
