@@ -1,4 +1,4 @@
-# 🐛 karakan
+# 🐛 karakan [![Build Status](https://travis-ci.org/LiquidLemon/karakan.svg?branch=master)](https://travis-ci.org/LiquidLemon/karakan)
 
 A multipurpose Discord bot
 
